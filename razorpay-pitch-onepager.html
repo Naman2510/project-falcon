@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Falcon One-Pager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#EDEFF3; --page:#FFFFFF; --surface-2:#F2F4F8;
+    --ink:#101A2C; --ink-2:#4A5568; --ink-3:#78859A;
+    --line:#DCE1E9; --line-strong:#C3CBD8;
+    --navy:#142A4E; --navy-ink:#0E2036;
+    --brass:#9C6B27; --brass-soft:#F3E7D2;
+    --good:#1E7A46; --bad:#B23A3A;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#05070C; --page:#111B2E; --surface-2:#16233B;
+      --ink:#EAEEF6; --ink-2:#B7C1D4; --ink-3:#8895AC;
+      --line:#26334E; --line-strong:#37456A;
+      --navy:#3E63A6; --navy-ink:#0B1526;
+      --brass:#D3A360; --brass-soft:#241C0C;
+      --good:#4ADE80; --bad:#F87171;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#05070C; --page:#111B2E; --surface-2:#16233B;
+    --ink:#EAEEF6; --ink-2:#B7C1D4; --ink-3:#8895AC;
+    --line:#26334E; --line-strong:#37456A;
+    --navy:#3E63A6; --navy-ink:#0B1526;
+    --brass:#D3A360; --brass-soft:#241C0C;
+    --good:#4ADE80; --bad:#F87171;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif; font-size:13.5px; line-height:1.42;
+    padding:26px 16px 46px;
+  }
+  .page{
+    max-width:1180px; margin:0 auto; background:var(--page); border:1px solid var(--line);
+    border-radius:8px; box-shadow:0 1px 3px rgba(16,26,44,.08), 0 20px 50px -28px rgba(16,26,44,.35);
+    overflow:hidden;
+  }
+  .band{background:var(--navy-ink); color:#DCE4F2; padding:9px 26px; display:flex; justify-content:space-between;
+    font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; flex-wrap:wrap; gap:6px;}
+  .band b{color:#F0D9AE;}
+  .head{padding:22px 26px 16px; border-bottom:2px solid var(--navy); display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:10px;}
+  .head h1{font-family:"Source Serif 4",Georgia,serif; font-weight:700; font-size:1.62rem; margin:0 0 4px; text-wrap:balance;}
+  .head p{margin:0; color:var(--ink-2); font-size:13px; max-width:58ch;}
+  .head .to{text-align:right; font-size:11.5px; color:var(--ink-3); font-family:"IBM Plex Mono",monospace; line-height:1.6;}
+  .head .to b{color:var(--ink); display:block; font-family:"IBM Plex Sans"; font-size:12.5px;}
+  .statrow{display:grid; grid-template-columns:repeat(5,1fr); border-bottom:1px solid var(--line);}
+  .stat{padding:12px 14px; border-right:1px solid var(--line); text-align:center;}
+  .stat:last-child{border-right:none;}
+  .stat .n{font-family:"IBM Plex Mono",monospace; font-size:1.18rem; font-weight:600; color:var(--navy); font-variant-numeric:tabular-nums;}
+  .stat .l{font-size:10px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-3); margin-top:3px;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr;}
+  .cell{padding:18px 26px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .cell:nth-child(2n){border-right:none;}
+  .cell h2{
+    font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--brass); font-weight:600; margin:0 0 10px; display:flex; align-items:center; gap:8px;
+  }
+  .cell h2 .num{background:var(--navy); color:#fff; width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:10px; flex:none;}
+  .cell ul{margin:0; padding-left:16px;}
+  .cell li{margin-bottom:7px;}
+  .cell li b{color:var(--ink);}
+  .cell p{margin:0 0 8px;}
+  .mini{font-size:11px; color:var(--ink-3); margin-top:10px; border-top:1px dashed var(--line); padding-top:8px;}
+  /* valuation mini football field */
+  .ffm{margin-top:8px;}
+  .ffmrow{display:grid; grid-template-columns:96px 1fr; gap:8px; align-items:center; margin-bottom:7px;}
+  .ffmrow .l{font-size:10.5px; color:var(--ink-2);}
+  .ffmtrack{position:relative; height:14px; background:var(--surface-2); border-radius:3px;}
+  .ffmbar{position:absolute; top:2px; height:10px; border-radius:5px; background:var(--navy); opacity:.8;}
+  .ffmbar.reco{background:var(--brass); opacity:1;}
+  .ffmbar .c{position:absolute; top:-13px; left:0; font-size:9.5px; font-family:"IBM Plex Mono",monospace; color:var(--ink-3); white-space:nowrap;}
+  .ffmpt{position:absolute; top:-2px; bottom:-2px; width:2px; background:var(--ink);}
+  .ffmaxis{display:grid; grid-template-columns:96px 1fr; gap:8px;}
+  .ffmaxis .t{position:relative; height:12px;}
+  .ffmaxis .t i{position:absolute; font-style:normal; font-size:9px; color:var(--ink-3); transform:translateX(-50%); font-family:"IBM Plex Mono",monospace;}
+  .steps{list-style:none; margin:0; padding:0; counter-reset:step;}
+  .steps li{counter-increment:step; position:relative; padding-left:26px; margin-bottom:9px;}
+  .steps li::before{content:counter(step); position:absolute; left:0; top:0; width:18px; height:18px; background:var(--surface-2); border:1px solid var(--line-strong); border-radius:50%; font-size:10px; display:flex; align-items:center; justify-content:center; font-family:"IBM Plex Mono",monospace; color:var(--ink-2);}
+  .tag{display:inline-block; font-size:9.5px; font-family:"IBM Plex Mono",monospace; text-transform:uppercase; letter-spacing:.05em; padding:1px 6px; border-radius:3px; margin-left:6px; vertical-align:1px;}
+  .tag.primary{background:var(--brass-soft); color:var(--brass);}
+  .tag.parallel{background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line-strong);}
+  .foot{padding:14px 26px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; font-size:10.5px; color:var(--ink-3);}
+  @media (max-width:820px){
+    .grid2{grid-template-columns:1fr;} .cell{border-right:none;}
+    .statrow{grid-template-columns:repeat(2,1fr);} .stat{border-bottom:1px solid var(--line);}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="band"><span><b>Project Falcon</b> · Strictly Private &amp; Confidential — Illustrative Work Sample</span><span>10 September 2026</span></div>
+  <div class="head">
+    <div>
+      <h1>Razorpay — IPO Readiness Review &amp; Strategic Alternatives</h1>
+      <p>A dual-track process recommendation weighing the confidential DRHP already on file against a narrow, discreet strategic market check.</p>
+    </div>
+    <div class="to">Prepared for<b>Razorpay Board &amp; Special Committee</b>By Naman Gautam · Coverage: Fintech &amp; Payments</div>
+  </div>
+
+  <div class="statrow">
+    <div class="stat"><div class="n">$427M</div><div class="l">FY25 Revenue (+65% YoY)</div></div>
+    <div class="stat"><div class="n">$180B</div><div class="l">Annualized TPV</div></div>
+    <div class="stat"><div class="n">$7.5B</div><div class="l">2022 Peak Valuation</div></div>
+    <div class="stat"><div class="n">$5.0–6.0B</div><div class="l">Current DRHP Price Talk</div></div>
+    <div class="stat"><div class="n">₹5–6,000Cr</div><div class="l">Targeted Primary Raise</div></div>
+  </div>
+
+  <div class="grid2">
+    <div class="cell">
+      <h2><span class="num">1</span>Situation Overview</h2>
+      <ul>
+        <li>Razorpay completed its India re-domiciliation in 2025 and confidentially filed IPO papers with SEBI in 2026, targeting a <b>₹5,000–6,000 Cr</b> primary-plus-OFS raise.</li>
+        <li>FY25 revenue grew <b>65% YoY to ₹3,783 Cr</b> ($427M) on $180B of processed volume; the company posted a one-time <b>₹1,209 Cr loss</b> driven almost entirely by a ~₹1,275 Cr re-domiciliation tax charge — the core payments business was EBITDA-positive.</li>
+        <li>Reported price talk of <b>$5.0–6.0B</b> is a 20–33% cut to the 2022 peak private mark of $7.5B — in line with, not worse than, the broader India-fintech re-rating (Pine Labs listed Nov-2025 at ~35–45% below its own 2022 peak).</li>
+        <li><b>New tailwind:</b> Parliament's Aug-2026 amendment reopening merchant-fee (MDR) charging on large-merchant UPI volumes — zero-MDR since 2020 — is a structural, not yet fully priced, revenue-pool unlock for every UPI-heavy PSP, Razorpay included.</li>
+        <li><b>Crowded window:</b> PayU and PhonePe are both pursuing India listings on a similar timeline, competing for the same pool of IPO investor demand.</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <h2><span class="num">2</span>Strategic Rationale for a Dual Track</h2>
+      <p>Running a quiet parallel track alongside — not instead of — the IPO preserves optionality without disrupting either path:</p>
+      <ul>
+        <li><b>Pricing tension:</b> a credible strategic alternative is the single best lever against IPO investors anchoring to the depressed end of the comps range (see companion Comps &amp; Precedents memo — trading comps alone imply a floor near $4.2B).</li>
+        <li><b>Window risk hedge:</b> three India fintechs racing to list in the same 12-month window raises real execution risk; a strategic option is the fallback if the IPO market shuts or reprices adversely mid-process.</li>
+        <li><b>Precedent-transaction evidence:</b> control buyers have paid <b>17–18x revenue</b> for best-in-class fintech infrastructure (Nasdaq/Adenza) and even richer multiples for dominant India payment rails specifically (PayU/BillDesk, pre-collapse) — a strategic bid could plausibly clear the IPO range.</li>
+        <li><b>Discretion is the constraint, not the opportunity:</b> BillDesk's own deal collapsed on regulatory timeline risk after 14 months — an India payments sale process is slow and leak-prone. That argues for 2–3 targeted conversations, never a broad auction.</li>
+      </ul>
+    </div>
+    <div class="cell">
+      <h2><span class="num">3</span>Valuation Summary</h2>
+      <div class="ffm">
+        <div class="ffmrow"><div class="l">Trading comps</div><div class="ffmtrack"><div class="ffmpt" style="left:41.7%;"></div><span class="c" style="left:calc(41.7% + 4px);">$4.2B</span></div></div>
+        <div class="ffmrow"><div class="l">Pine Labs r/t</div><div class="ffmtrack"><div class="ffmbar" style="left:41%; width:8%;"><span class="c">$4.1–4.9B</span></div></div></div>
+        <div class="ffmrow"><div class="l">DRHP talk</div><div class="ffmtrack"><div class="ffmbar reco" style="left:50%; width:10%;"><span class="c">$5.0–6.0B</span></div></div></div>
+        <div class="ffmrow"><div class="l">Precedents</div><div class="ffmtrack"><div class="ffmbar" style="left:51%; width:35%;"><span class="c">$5.1–8.6B</span></div></div></div>
+        <div class="ffmrow"><div class="l">2022 round</div><div class="ffmtrack"><div class="ffmpt" style="left:75%;"></div><span class="c" style="left:calc(75% + 4px);">$7.5B</span></div></div>
+        <div class="ffmaxis"><div></div><div class="t"><i style="left:0%">$0</i><i style="left:25%">$2.5B</i><i style="left:50%">$5B</i><i style="left:75%">$7.5B</i><i style="left:100%">$10B</i></div></div>
+      </div>
+      <p class="mini"><b>Recommended board range: $4.5–6.0B</b> — anchored to observable DRHP price talk, with the trading-comps/Pine Labs floor as downside discipline. A strategic bid inside 2–3 confidential conversations would only be actionable above the top of this range on all-cash, high-certainty terms (see §4).</p>
+    </div>
+    <div class="cell">
+      <h2><span class="num">4</span>Process Recommendation</h2>
+      <ol class="steps">
+        <li><b>Continue primary-track IPO prep</b><span class="tag primary">Primary</span> — advance the confidential DRHP to public filing; target a listing window in H2 2026–2027 subject to market conditions.</li>
+        <li><b>Run a narrow, confidential market check</b><span class="tag parallel">Parallel</span> — 2–3 targeted, NDA-bound conversations with strategic acquirers for whom Indian UPI/BaaS rails close a real strategic gap; no broad auction, no data room, no leak surface.</li>
+        <li><b>Single mandate structure</b><span class="tag primary">Primary</span> — engage one bank as IPO lead-left <i>and</i> strategic-alternatives advisor so all sensitive information sits with one team.</li>
+        <li><b>Pre-agreed off-ramp</b><span class="tag parallel">Parallel</span> — the board pauses IPO filing only for an all-cash strategic offer clearing &gt;1.3x the top of the DRHP range with a credible regulatory path; otherwise proceed to public filing on the current timeline.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Illustrative work sample built from public information; not a live mandate. See companion Comps &amp; Precedents memo and Industry Note for full sourcing.</span>
+    <span>Project Falcon — Page 1 of 1</span>
+  </div>
+</div>
+</body>
+</html>

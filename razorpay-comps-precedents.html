@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Razorpay Comps &amp; Precedents</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#F4F5F7; --surface:#FFFFFF; --surface-2:#EAEDF3;
+    --ink:#101A2C; --ink-2:#4A5568; --ink-3:#78859A;
+    --line:#DBE0E8; --line-strong:#C3CBD8;
+    --navy:#142A4E; --navy-ink:#0E2036;
+    --brass:#9C6B27; --brass-soft:#F3E7D2;
+    --good:#1E7A46; --bad:#B23A3A;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+    --shadow: 0 1px 2px rgba(16,26,44,.06), 0 8px 24px -14px rgba(16,26,44,.22);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0A101C; --surface:#111B2E; --surface-2:#16233B;
+      --ink:#EAEEF6; --ink-2:#B7C1D4; --ink-3:#8895AC;
+      --line:#26334E; --line-strong:#37456A;
+      --navy:#3E63A6; --navy-ink:#0B1526;
+      --brass:#D3A360; --brass-soft:#241C0C;
+      --good:#4ADE80; --bad:#F87171;
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0A101C; --surface:#111B2E; --surface-2:#16233B;
+    --ink:#EAEEF6; --ink-2:#B7C1D4; --ink-3:#8895AC;
+    --line:#26334E; --line-strong:#37456A;
+    --navy:#3E63A6; --navy-ink:#0B1526;
+    --brass:#D3A360; --brass-soft:#241C0C;
+    --good:#4ADE80; --bad:#F87171;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    font-size:15px; line-height:1.55;
+  }
+  ::selection{background:var(--brass-soft);}
+  .mast{
+    background:var(--navy-ink); color:#DCE4F2;
+    padding:10px 28px; display:flex; justify-content:space-between; align-items:center;
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.08em;
+    text-transform:uppercase; flex-wrap:wrap; gap:6px;
+  }
+  .mast b{color:#F0D9AE; font-weight:600;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+  header.title-block{padding:46px 0 30px; border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--brass); font-weight:600; margin:0 0 12px;
+  }
+  h1.doc-title{
+    font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:2.5rem;
+    line-height:1.14; margin:0 0 14px; color:var(--ink); text-wrap:balance; max-width:20ch;
+  }
+  .doc-sub{color:var(--ink-2); font-size:1.05rem; max-width:62ch; margin:0;}
+  .metabar{display:flex; gap:28px; flex-wrap:wrap; margin-top:22px; font-size:13px; color:var(--ink-3);}
+  .metabar span{display:block; font-family:"IBM Plex Mono",monospace; color:var(--ink); font-size:13.5px; margin-top:2px;}
+  section{padding:38px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2.sec-title{
+    font-family:"Source Serif 4",serif; font-size:1.5rem; font-weight:600; margin:0 0 6px; color:var(--ink);
+  }
+  .sec-kicker{
+    font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--ink-3); margin:0 0 4px;
+  }
+  p.lede{color:var(--ink-2); max-width:74ch; margin:10px 0 22px;}
+  .callout{
+    border-left:3px solid var(--brass); background:var(--brass-soft);
+    padding:16px 20px; border-radius:2px; margin:18px 0; font-size:14px; color:var(--ink);
+  }
+  .callout b{color:var(--brass);}
+  .tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:6px; box-shadow:var(--shadow); background:var(--surface);}
+  table{border-collapse:collapse; width:100%; min-width:760px; font-size:13.5px;}
+  thead th{
+    text-align:right; font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--ink-3); font-weight:600; padding:11px 14px;
+    border-bottom:1px solid var(--line-strong); white-space:nowrap; background:var(--surface-2);
+  }
+  thead th:first-child, thead th:nth-child(2){text-align:left;}
+  tbody td{
+    padding:11px 14px; border-bottom:1px solid var(--line); text-align:right;
+    font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  tbody td:first-child, tbody td:nth-child(2){text-align:left; white-space:normal;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover td{background:var(--surface-2);}
+  .co{font-weight:600; color:var(--ink);}
+  .tick{font-size:11.5px; color:var(--ink-3);}
+  .tier{
+    display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:7px; vertical-align:1px;
+  }
+  .t1{background:var(--s1);} .t2{background:var(--s2);} .t3{background:var(--s3);}
+  .up{color:var(--good); font-weight:600;} .down{color:var(--bad); font-weight:600;}
+  .foot{font-size:11.5px; color:var(--ink-3); margin-top:10px; max-width:78ch;}
+  .legend{display:flex; gap:18px; flex-wrap:wrap; font-size:12.5px; color:var(--ink-2); margin:14px 0 0;}
+  .legend span{display:inline-flex; align-items:center;}
+  /* bar chart */
+  .chart{margin:26px 0 6px; background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:24px 26px 16px; box-shadow:var(--shadow);}
+  .chart h3{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); margin:0 0 20px; font-weight:600;}
+  .barrow{display:grid; grid-template-columns:150px 1fr 64px; align-items:center; gap:12px; margin-bottom:12px;}
+  .barrow .lbl{font-size:13px; color:var(--ink); font-weight:500;}
+  .barrow .lbl small{display:block; color:var(--ink-3); font-weight:400; font-size:11px;}
+  .track{position:relative; height:20px; background:var(--surface-2); border-radius:3px; overflow:visible;}
+  .fill{position:absolute; left:0; top:0; height:100%; border-radius:3px 4px 4px 3px;}
+  .barrow .val{font-family:"IBM Plex Mono",monospace; font-size:13px; text-align:right; font-variant-numeric:tabular-nums;}
+  .axis{display:grid; grid-template-columns:150px 1fr 64px; gap:12px; margin-top:6px;}
+  .axis .ticks{position:relative; height:16px;}
+  .axis .ticks i{position:absolute; top:0; font-style:normal; font-size:10.5px; color:var(--ink-3); transform:translateX(-50%); font-family:"IBM Plex Mono",monospace;}
+  .rzp-line{position:absolute; top:-4px; bottom:-4px; width:2px; background:var(--brass);}
+  .rzp-line::after{content:"Razorpay (implied)"; position:absolute; top:-18px; left:50%; transform:translateX(-50%); font-size:10px; color:var(--brass); font-family:"IBM Plex Mono",monospace; white-space:nowrap; font-weight:600;}
+  /* football field */
+  .ffrow{display:grid; grid-template-columns:200px 1fr; gap:16px; align-items:center; margin-bottom:16px;}
+  .fflbl{font-size:13px;}
+  .fflbl b{display:block; color:var(--ink);}
+  .fflbl small{color:var(--ink-3); font-size:11px;}
+  .fftrack{position:relative; height:26px; background:var(--surface-2); border-radius:4px;}
+  .ffbar{position:absolute; top:4px; height:18px; border-radius:9px; background:var(--navy); opacity:.85;}
+  .ffbar.reco{background:var(--brass); opacity:1;}
+  .ffbar .cap{position:absolute; top:-16px; font-size:10.5px; font-family:"IBM Plex Mono",monospace; color:var(--ink-2); white-space:nowrap;}
+  .ffbar .cap.r{right:0;} .ffbar .cap.l{left:0;}
+  .ffpoint{position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--ink);}
+  .ffaxis{display:grid; grid-template-columns:200px 1fr; gap:16px; margin-top:2px;}
+  .ffaxis .ticks{position:relative; height:18px;}
+  .ffaxis .ticks i{position:absolute; font-style:normal; font-size:10.5px; color:var(--ink-3); transform:translateX(-50%); font-family:"IBM Plex Mono",monospace;}
+  footer{padding:34px 0 60px; font-size:12px; color:var(--ink-3);}
+  footer h4{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); margin:0 0 10px;}
+  footer ol{padding-left:18px; margin:0 0 22px;}
+  footer li{margin-bottom:5px;}
+  footer a{color:var(--ink-2);}
+  .disclaimer{border-top:1px solid var(--line); padding-top:18px; font-style:italic;}
+  @media (max-width:640px){
+    h1.doc-title{font-size:1.8rem;}
+    .barrow, .axis{grid-template-columns:96px 1fr 50px;}
+    .ffrow, .ffaxis{grid-template-columns:110px 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="mast">
+  <span><b>Project Falcon</b> — Illustrative Work Sample, Not a Live Mandate</span>
+  <span>Comparable Companies &amp; Precedent Transactions · 10 Sep 2026</span>
+</div>
+
+<div class="wrap">
+  <header class="title-block">
+    <p class="eyebrow">Valuation Reference · Digital Payments &amp; Fintech Infrastructure</p>
+    <h1 class="doc-title">Razorpay — Trading Comparables &amp; Precedent Transactions</h1>
+    <p class="doc-sub">A valuation cross-check built ahead of Razorpay's targeted FY2027 IPO, triangulating public trading multiples, announced M&amp;A precedents, and observable private-market data points across Indian and global payments infrastructure.</p>
+    <div class="metabar">
+      <div>Coverage<span>India / Global Fintech Infra</span></div>
+      <div>Subject<span>Razorpay Software Pvt. Ltd.</span></div>
+      <div>Basis<span>TTM, as of Sep-2026</span></div>
+      <div>FX assumption<span>₹88.5/US$1 · €1 = US$1.08</span></div>
+    </div>
+  </header>
+
+  <section id="methodology">
+    <p class="sec-kicker">01 — Methodology</p>
+    <h2 class="sec-title">Set construction &amp; calendarization</h2>
+    <p class="lede">No public company matches Razorpay's exact mix (online payment gateway + banking-as-a-service + payroll + BNPL-adjacent rewards). The set below is built in three tiers by business-model proximity, and every figure is normalized to a trailing-twelve-month (TTM) window ending at each company's most recently reported quarter — not stale fiscal-year-end figures. This matters here specifically because one comp, Paytm (One97 Communications), runs a March fiscal year-end while every global peer runs December — a naive FY-to-FY comparison would line up numbers nine months apart. Rolling TTM windows re-base all six companies onto the same trailing calendar period regardless of fiscal-year convention.</p>
+    <div class="callout"><b>Banker's note —</b> Razorpay reports on an Indian FY (April–March) and discloses annual, not quarterly, financials. Its FY25 (ended Mar-2025) figures are therefore compared against peers' TTM windows ending mid-to-late 2026 — an unavoidable ~12–15 month lag for the one private company in the set. This is flagged, not hidden, in every calculation that uses Razorpay's financials below.</div>
+  </section>
+
+  <section id="comps">
+    <p class="sec-kicker">02 — Trading Comparables</p>
+    <h2 class="sec-title">Public peer set</h2>
+    <p class="lede">Tier 1 peers are the closest business-model match (pure online payment service providers). Tier 2 are larger-scale, slower-growth acquiring/core-processing infrastructure — useful for margin and scale context, poor growth comps. Tier 3 is the one India-listed, UPI-native peer.</p>
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th><th>Ticker / Exchange</th><th>Mkt Cap</th><th>EV</th>
+            <th>TTM Revenue</th><th>YoY Growth</th><th>EBITDA Margin</th><th>EV / Revenue</th><th>EV / EBITDA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="co"><span class="tier t1"></span>Adyen N.V.</td><td>ADYEN · Euronext Amsterdam</td>
+            <td>€30.0B</td><td>€18.1B</td><td>€2.58B</td><td class="up">+17.9%</td><td>50.0%</td><td>7.0x</td><td>13.4x</td>
+          </tr>
+          <tr>
+            <td class="co"><span class="tier t1"></span>PayPal Holdings</td><td>PYPL · Nasdaq</td>
+            <td>$44.6B</td><td>$47.6B</td><td>$34.1B</td><td class="up">+5.7%</td><td>18.9%</td><td>1.4x</td><td>7.4x</td>
+          </tr>
+          <tr>
+            <td class="co"><span class="tier t2"></span>Global Payments</td><td>GPN · NYSE</td>
+            <td>$23.0B</td><td>$41.2B</td><td>$10.2B</td><td class="up">+32.2%*</td><td>43.9%</td><td>4.0x</td><td>9.2x</td>
+          </tr>
+          <tr>
+            <td class="co"><span class="tier t2"></span>Fiserv, Inc.</td><td>FI · NYSE</td>
+            <td>$25.9B</td><td>$53.3B</td><td>$20.9B</td><td class="down">−1.2%</td><td>37.1%</td><td>2.6x</td><td>6.9x</td>
+          </tr>
+          <tr>
+            <td class="co"><span class="tier t2"></span>Block, Inc.</td><td>XYZ · NYSE</td>
+            <td>$48.0B</td><td>$48.4B</td><td>$25.0B</td><td class="up">+5.1%</td><td>6.2%</td><td>1.9x</td><td>31.3x</td>
+          </tr>
+          <tr>
+            <td class="co"><span class="tier t3"></span>One97 Communications (Paytm)</td><td>PAYTM · NSE (India, FYE Mar)</td>
+            <td>₹1.12T ($12.7B)</td><td>n/a†</td><td>₹8,967Cr ($1.01B)</td><td class="up">+22.6%</td><td>~8%</td><td>~12.5x†</td><td>n/m</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="foot">*GPN's TTM revenue growth is mechanically inflated by the Apr-2025 Worldpay acquisition closing into its reported base — not organic, and excluded from the growth-adjusted read below. †Paytm carries no debt and a meaningful net-cash balance; a true EV (below market cap) was not cleanly disclosed in sources reviewed, so EV/Revenue is shown as a market-cap-based proxy and should be read as a soft ceiling, not a precise multiple. Pricing as of 10-Sep-2026; sources in Appendix.</p>
+    <div class="legend">
+      <span><span class="tier t1"></span>Tier 1 — Global online PSP (closest model fit)</span>
+      <span><span class="tier t2"></span>Tier 2 — Scaled acquiring / consumer fintech infra</span>
+      <span><span class="tier t3"></span>Tier 3 — India-listed, UPI-native</span>
+    </div>
+
+    <div class="chart">
+      <h3>EV / Revenue by peer, vs. Razorpay's naive-average implied position</h3>
+      <div class="barrow"><div class="lbl">Adyen<small>Tier 1</small></div><div class="track"><div class="fill" style="width:56%; background:var(--s1);"></div></div><div class="val">7.0x</div></div>
+      <div class="barrow"><div class="lbl">PayPal<small>Tier 1</small></div><div class="track"><div class="fill" style="width:11.2%; background:var(--s1);"></div></div><div class="val">1.4x</div></div>
+      <div class="barrow"><div class="lbl">Global Payments<small>Tier 2</small></div><div class="track"><div class="fill" style="width:32%; background:var(--s2);"></div></div><div class="val">4.0x</div></div>
+      <div class="barrow"><div class="lbl">Fiserv<small>Tier 2</small></div><div class="track"><div class="fill" style="width:20.8%; background:var(--s2);"></div></div><div class="val">2.6x</div></div>
+      <div class="barrow"><div class="lbl">Block<small>Tier 2</small></div><div class="track"><div class="fill" style="width:15.2%; background:var(--s2);"></div></div><div class="val">1.9x</div></div>
+      <div class="barrow"><div class="lbl">Paytm<small>Tier 3</small></div><div class="track"><div class="fill" style="width:100%; background:var(--s3);"></div></div><div class="val">12.5x</div></div>
+      <div class="axis">
+        <div></div>
+        <div class="ticks">
+          <i style="left:0%">0x</i><i style="left:20%">2.5x</i><i style="left:40%">5x</i><i style="left:60%">7.5x</i><i style="left:80%">10x</i><i style="left:100%">12.5x</i>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="callout"><b>Why the un-weighted average is the wrong number —</b> the plain six-name average (4.9x) is dragged down by Fiserv and Global Payments — mature, single-digit-growth acquirers with a fundamentally different risk/growth profile than a 65%-growth Indian platform business. Excluding those two as poor growth comps, the "narrow" peer average (Adyen + PayPal + Paytm) is <b>7.0x</b>; excluding PayPal too (scaled, low-growth, U.S.-centric) leaves Adyen + Paytm at <b>9.75x</b> — the more defensible read for a business growing revenue at 65% with a still-nascent India/EM international footprint. This is the multiple selection judgment call that matters more than the arithmetic.</div>
+  </section>
+
+  <section id="precedents">
+    <p class="sec-kicker">03 — Precedent Transactions</p>
+    <h2 class="sec-title">Announced M&amp;A in payments &amp; fintech infrastructure</h2>
+    <p class="lede">Six transactions selected for relevance to a Razorpay scenario: scale consolidation (GPN/Worldpay), a best-in-class embedded-fintech-infra margin comp (Nasdaq/Adenza), two BNPL/product-expansion deals (Block/Afterpay, PayPal/Paidy), the single most relevant India payments precedent (PayU/BillDesk — including its collapse), and a recent strategic-optionality deal for next-gen rails (Stripe/Bridge).</p>
+    <div class="tblwrap">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Acquirer → Target</th><th>Deal Value</th><th>Implied Multiple</th><th>Status &amp; Read-through</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apr 2025</td><td class="co">Global Payments → Worldpay</td><td>$24.25B</td><td>8.5x EBITDA (net, post-synergy)</td>
+            <td>Closed. Largest payments deal since 2019; scale-driven, ~$600M run-rate synergies targeted.</td>
+          </tr>
+          <tr>
+            <td>Jun 2023</td><td class="co">Nasdaq → Adenza (Thoma Bravo)</td><td>$10.5B</td><td>17.8x revenue · ~30.7x EBITDA</td>
+            <td>Closed. 58% EBITDA margin, ~15% organic growth — the richest clean fintech-infra comp; sets a ceiling for what a high-margin, mission-critical platform can fetch.</td>
+          </tr>
+          <tr>
+            <td>Aug 2021 → Jan 2022</td><td class="co">Block → Afterpay</td><td>$29.0B announced</td><td>~42x TTM revenue (at announcement)</td>
+            <td>Closed at ~$13.9B — value fell ~52% between signing and closing as Block's stock declined (fixed-exchange-ratio, all-stock deal). Key lesson: headline deal value ≠ value received in a stock-for-stock structure.</td>
+          </tr>
+          <tr>
+            <td>Sep 2021</td><td class="co">PayPal → Paidy</td><td>$2.7B</td><td>Not disclosed</td>
+            <td>Closed. Japan BNPL — geographic + product buy-vs-build, directly analogous to Razorpay's own tuck-in logic (see §04).</td>
+          </tr>
+          <tr>
+            <td>Aug 2021 → terminated Oct 2022</td><td class="co">PayU (Prosus) → BillDesk</td><td>$4.7B</td><td>~18x book net assets; &gt;100x reported PAT</td>
+            <td><b>Terminated</b> — CCI cleared the deal Sep-2022, but conditions precedent lapsed at the Sep-30 long-stop. The single most relevant India payments precedent, and a live warning: domestic payments consolidation here carries real regulatory-timeline risk.</td>
+          </tr>
+          <tr>
+            <td>Oct 2024 → Feb 2025</td><td class="co">Stripe → Bridge</td><td>$1.1B</td><td>&gt;5x step-up vs. 2024 Series A ($200M)</td>
+            <td>Closed. Stablecoin/programmable-money infrastructure — a strategic-optionality price, not a revenue multiple; the read-through is what large PSPs will pay for rails optionality, not current cash flow.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="foot">Deal values and multiples per company disclosures and contemporaneous press reporting cited in the Appendix. Where a multiple was not publicly disclosed, it is marked rather than estimated.</p>
+  </section>
+
+  <section id="rzp-mna">
+    <p class="sec-kicker">04 — For Context</p>
+    <h2 class="sec-title">Razorpay's own M&amp;A track record</h2>
+    <p class="lede">Worth reading against §03: every large market precedent above is a scale or optionality play measured in billions. Razorpay's own eight acquisitions since 2019 are the opposite — small, capability-driven tuck-ins that bought product surface area (offline POS, payroll, core-banking tech, loyalty) rather than market share. That contrast is itself informative for the pitch's process recommendation: Razorpay has never run — and has no internal muscle memory for — a scale transaction of the kind seen in §03.</p>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th>Date</th><th>Target</th><th>Rationale</th><th>Disclosed Value</th></tr></thead>
+        <tbody>
+          <tr><td>Aug 2019</td><td class="co">Thirdwatch</td><td>Real-time fraud/AI detection</td><td>Undisclosed</td></tr>
+          <tr><td>Oct 2019</td><td class="co">Ezetap</td><td>Offline / POS payments entry</td><td>~$200M (reported)</td></tr>
+          <tr><td>Jul 2021</td><td class="co">TERA Finlabs</td><td>AI-based risk-tech SaaS</td><td>Undisclosed</td></tr>
+          <tr><td>2021</td><td class="co">Opfin</td><td>Payroll &amp; HR management</td><td>Undisclosed</td></tr>
+          <tr><td>Feb 2022</td><td class="co">Curlec</td><td>First international deal — Malaysia PSP</td><td>&gt;$19M implied (majority stake)</td></tr>
+          <tr><td>Mar 2022</td><td class="co">IZealiant</td><td>Core-banking technology</td><td>Undisclosed</td></tr>
+          <tr><td>Sep 2022</td><td class="co">PoshVine</td><td>Loyalty &amp; rewards management</td><td>Undisclosed (7th deal)</td></tr>
+          <tr><td>Jun 2025</td><td class="co">POP (POPclub)</td><td>UPI-linked rewards, e-commerce</td><td>$30M (majority stake)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="triangulation">
+    <p class="sec-kicker">05 — Valuation Triangulation</p>
+    <h2 class="sec-title">Football field: bracketing a defensible range</h2>
+    <p class="lede">Four independent methods, deliberately including two "hard" real-world data points rather than relying only on computed multiples:</p>
+    <div class="chart">
+      <div class="ffrow">
+        <div class="fflbl"><b>Narrow trading comps</b><small>Adyen + Paytm avg. 9.75x × FY25 revenue</small></div>
+        <div class="fftrack"><div class="ffpoint" style="left:41.7%;"></div><span style="position:absolute; top:3px; margin-left:calc(41.7% + 6px); font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-2);">$4.17B</span></div>
+      </div>
+      <div class="ffrow">
+        <div class="fflbl"><b>Pine Labs read-through</b><small>Nov-2025 IPO priced 35–45% below its 2022 private peak</small></div>
+        <div class="fftrack"><div class="ffbar" style="left:41%; width:8%;"><span class="cap l">$4.1–4.9B</span></div></div>
+      </div>
+      <div class="ffrow">
+        <div class="fflbl"><b>Current DRHP price talk</b><small>Confidential SEBI filing, per reporting</small></div>
+        <div class="fftrack"><div class="ffbar reco" style="left:50%; width:10%;"><span class="cap l">$5.0–6.0B</span></div></div>
+      </div>
+      <div class="ffrow">
+        <div class="fflbl"><b>Precedent-transaction control premium</b><small>Adenza / BillDesk-style strategic multiples</small></div>
+        <div class="fftrack"><div class="ffbar" style="left:51%; width:35%;"><span class="cap r">$5.1–8.6B</span></div></div>
+      </div>
+      <div class="ffrow">
+        <div class="fflbl"><b>2022 primary round</b><small>Prior private financing mark</small></div>
+        <div class="fftrack"><div class="ffpoint" style="left:75%;"></div><span style="position:absolute; top:3px; margin-left:calc(75% + 6px); font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-2);">$7.5B</span></div>
+      </div>
+      <div class="ffaxis">
+        <div></div>
+        <div class="ticks">
+          <i style="left:0%">$0B</i><i style="left:25%">$2.5B</i><i style="left:50%">$5B</i><i style="left:75%">$7.5B</i><i style="left:100%">$10B</i>
+        </div>
+      </div>
+    </div>
+    <div class="callout"><b>Read —</b> trading comps and the Pine Labs precedent both sit meaningfully below the reported $5.0–6.0B DRHP price talk, while precedent-transaction control premiums sit above it. That's the normal, healthy pattern for an IPO of a scarce, high-growth platform asset: public trading comps and a recent direct-peer IPO set a conservative floor; a hypothetical strategic sale sets a much richer ceiling; management's actual price talk sits sensibly in between, closer to the floor than the ceiling — consistent with a company choosing the IPO path specifically because it believes public markets, not a single strategic buyer, will pay the fuller price. <b>Recommended range for board discussion: $4.5B–$6.0B</b>, i.e., the DRHP talk anchored down slightly toward the comps/Pine-Labs floor to build in IPO-market conservatism.</div>
+  </section>
+
+  <footer>
+    <div class="disclaimer">Illustrative valuation work sample prepared from public information for demonstration purposes. Razorpay has not engaged any bank in connection with this analysis; nothing here reflects non-public information. All figures are as reported/estimated by the cited sources as of 10-Sep-2026 and are subject to normal data-vintage and rounding limitations.</div>
+    <h4 style="margin-top:22px;">Appendix — Sources</h4>
+    <ol>
+      <li>Global Payments Inc., investor release, "Global Payments Announces Agreements to Acquire Worldpay and Divest Issuer Solutions," Apr-2025 (businesswire.com, investors.globalpayments.com).</li>
+      <li>Nasdaq, Inc. / Thoma Bravo, "Nasdaq Accelerates Its Transformation... with the Acquisition of Adenza," Jun-2023 (ir.nasdaq.com, thomabravo.com, CNBC).</li>
+      <li>Square/Block Inc. press release and SEC filings; The Motley Fool, "Why Square Is Buying Afterpay for $29 Billion," Aug-2021.</li>
+      <li>PayPal Holdings, "PayPal To Acquire Paidy," Sep-2021 press release; Bloomberg, CNBC coverage.</li>
+      <li>Bar &amp; Bench, YourStory, Swarajya, "PayU calls off $4.7 billion acquisition of BillDesk," Sep–Oct 2022.</li>
+      <li>TechCrunch, CNBC, "Stripe closes $1.1 billion Bridge deal," Feb-2025.</li>
+      <li>stockanalysis.com company pages for PYPL, GPN, FI, XYZ, ADYEN (market cap, EV, TTM revenue, EBITDA), retrieved Sep-2026.</li>
+      <li>Tracxn, "List of 7 Acquisitions by Razorpay," Sep-2025; Entrackr, PYMNTS, Inc42 acquisition coverage 2019–2025.</li>
+      <li>Business Standard, PL Capital, Inc42 — Razorpay FY25 financials, IPO/DRHP status, Sep–Oct 2025 and 2026 reporting.</li>
+      <li>TechCrunch, Reuters/TradingView — Pine Labs IPO pricing and listing, Nov-2025.</li>
+    </ol>
+  </footer>
+</div>
+
+</body>
+</html>
